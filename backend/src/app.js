@@ -25,7 +25,7 @@ const PORT = process.env.PORT || 5000;
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
 
 app.use(cors({
-  origin: FRONTEND_URL,
+  origin: [FRONTEND_URL, 'https://mini-crm-frontend.vercel.app', 'https://*.vercel.app'],
   credentials: true
 }));
 app.use(express.json({limit: '5mb'}));
